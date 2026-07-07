@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greece · Hong Kong · Turkey — Which Identity Route Fits Mainland China Residents? (July 2026)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;800&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F6F5; --surface:#FFFFFF; --ink:#16222E; --muted:#5B6B76; --line:#DBE2E1;
+  --gr:#2F6F8F; --gr-soft:#E8F0F4;
+  --hk:#B03A48; --hk-soft:#F7EBEC;
+  --tr:#148F84; --tr-soft:#E6F3F1;
+  --warn:#8A6116; --warn-soft:#FAF3E3;
+  --display:'Bitter',Georgia,'Noto Serif SC',serif;
+  --body:'Public Sans',-apple-system,'PingFang SC','Noto Sans SC',sans-serif;
+  --mono:'IBM Plex Mono','SF Mono',Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+sup a{color:var(--muted);text-decoration:none;font-family:var(--mono);font-size:.68em;padding:0 1px}
+sup a:hover{color:var(--ink);text-decoration:underline}
+/* header */
+header{border-bottom:3px solid var(--ink);background:var(--surface)}
+.masthead{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0 10px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em;flex-wrap:wrap;gap:8px}
+.hero{padding:44px 0 40px}
+.kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,4.6vw,50px);line-height:1.12;letter-spacing:-.01em;max-width:20ch}
+.hero p.dek{margin-top:18px;max-width:64ch;font-size:17.5px;color:#31404C}
+.swatches{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.swatch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--bg)}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block}
+/* sections */
+section{padding:52px 0}
+section+section{border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sec-no{font-family:var(--mono);font-size:13px;color:var(--muted)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(22px,3vw,30px)}
+.sec-sub{color:var(--muted);max-width:70ch;margin-bottom:26px}
+h3{font-family:var(--display);font-weight:700;font-size:19px;margin:26px 0 8px}
+p{margin:10px 0;max-width:76ch}
+ul{margin:8px 0 8px 20px;max-width:74ch}
+li{margin:5px 0}
+strong{font-weight:700}
+.note{background:var(--warn-soft);border-left:4px solid var(--warn);padding:14px 18px;border-radius:0 8px 8px 0;margin:18px 0;max-width:80ch}
+.note .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--warn);display:block;margin-bottom:4px}
+/* verdict cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .bar{height:6px}
+.card .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .flag{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.card h4{font-family:var(--display);font-size:19px;font-weight:700;line-height:1.25}
+.card .price{font-family:var(--mono);font-size:13.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:6px 10px;align-self:flex-start}
+.card p{font-size:14.5px;color:#33424E;margin:0}
+.card .verdict{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);font-size:14px}
+.card .verdict b{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:3px}
+.c-gr .bar{background:var(--gr)} .c-gr .verdict b{color:var(--gr)}
+.c-hk .bar{background:var(--hk)} .c-hk .verdict b{color:var(--hk)}
+.c-tr .bar{background:var(--tr)} .c-tr .verdict b{color:var(--tr)}
+/* capital ladder */
+.ladder{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:30px 28px 20px;margin-top:8px}
+.ladder .rail{position:relative;height:220px;border-bottom:2px solid var(--ink);margin:14px 8px 6px}
+.rung{position:absolute;bottom:0;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center}
+.rung .stick{width:3px;border-radius:2px}
+.rung .cap{font-family:var(--mono);font-size:12px;margin-bottom:6px;white-space:nowrap;text-align:center;line-height:1.4}
+.rung .cap b{font-size:13px}
+.anchor-line{position:absolute;bottom:0;top:0;border-left:2px dashed #98A6AE;transform:translateX(-50%)}
+.anchor-cap{position:absolute;top:-4px;transform:translateX(-50%);font-family:var(--mono);font-size:11.5px;color:var(--muted);background:var(--surface);padding:0 6px;white-space:nowrap}
+.rail-scale{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);padding:6px 8px 0}
+.ladder .foot{font-size:13px;color:var(--muted);margin-top:14px;max-width:none}
+/* tables */
+.tbl-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:14.5px}
+thead th{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-align:left;padding:14px 16px;border-bottom:2px solid var(--ink);background:var(--bg)}
+tbody th{text-align:left;font-weight:600;padding:12px 16px;border-bottom:1px solid var(--line);width:180px;vertical-align:top;background:var(--bg);font-size:13.5px}
+td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:none}
+td.col-gr{border-top:none;box-shadow:inset 3px 0 0 var(--gr-soft)}
+th.h-gr{color:var(--gr)} th.h-hk{color:var(--hk)} th.h-tr{color:var(--tr)}
+.good{color:#1E6B3C;font-weight:600}.bad{color:#A03030;font-weight:600}.mid{color:var(--warn);font-weight:600}
+/* deep dives */
+.dive{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px 28px;margin:22px 0;position:relative}
+.dive::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;border-radius:12px 0 0 12px}
+.dive.d-gr::before{background:var(--gr)} .dive.d-hk::before{background:var(--hk)} .dive.d-tr::before{background:var(--tr)}
+.dive .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.d-gr .eyebrow{color:var(--gr)} .d-hk .eyebrow{color:var(--hk)} .d-tr .eyebrow{color:var(--tr)}
+.dive h3{margin-top:0}
+.dive .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px 34px;margin-top:14px}
+.dive .grid2 h5{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:10px 0 4px}
+.kv{font-family:var(--mono);font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin:14px 0;line-height:1.9}
+/* refs */
+.refs ol{margin-left:22px;font-size:14px}
+.refs li{margin:10px 0;color:#33424E}
+.refs .where{display:block;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:2px}
+footer{border-top:3px solid var(--ink);background:var(--surface);padding:26px 0 40px;font-size:13px;color:var(--muted)}
+@media (max-width:820px){
+  .cards{grid-template-columns:1fr}
+  .dive .grid2{grid-template-columns:1fr}
+  .rung .cap{font-size:10.5px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .rung .stick{transition:height .6s ease}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap masthead">
+    <span>RESEARCH BRIEF · IDENTITY &amp; RESIDENCY PLANNING</span>
+    <span>PREPARED 06 JUL 2026 · SOURCES: 3 WECHAT ARTICLES + 14 EXTERNAL REFERENCES</span>
+  </div>
+  <div class="wrap hero">
+    <div class="kicker">Greece Golden Visa · Hong Kong New CIES 新资本投资者入境计划 · Turkey Citizenship by Investment</div>
+    <h1>Three doors, three price tags: which one can a mainland-China family actually open?</h1>
+    <p class="dek">A fact-checked comparison of the three programs promoted in the WeChat articles you collected, evaluated specifically for residents of developed mainland cities (Shanghai, Beijing, Shenzhen, Guangzhou, Hangzhou, Suzhou, Nanjing). "Suitable" is judged on what each identity delivers; "achievable" is judged on capital thresholds, China's foreign-exchange rules, and PRC nationality law — the constraints the marketing articles mostly leave out.</p>
+    <div class="swatches">
+      <span class="swatch"><span class="dot" style="background:var(--gr)"></span>Greece — residence permit (永居卡)</span>
+      <span class="swatch"><span class="dot" style="background:var(--hk)"></span>Hong Kong — resident visa → PR (香港身份)</span>
+      <span class="swatch"><span class="dot" style="background:var(--tr)"></span>Turkey — full citizenship (护照)</span>
+    </div>
+  </div>
+</header>
+
+<section id="verdict">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">01</span><h2>The verdict in one screen</h2></div>
+    <p class="sec-sub">The three products are not interchangeable: one is a low-cost EU residence card, one is a high-bar quasi-domestic status, one is a second passport. Suitability depends on the goal; achievability depends on how much of your wealth already sits legally outside the mainland.</p>
+    <div class="cards">
+      <div class="card c-gr"><div class="bar"></div><div class="body">
+        <span class="flag">GREECE · 希腊黄金签证</span>
+        <h4>Cheapest ticket to Europe — but the famous €250k price is now the exception, not the rule</h4>
+        <span class="price">€400k–€800k typical ≈ ¥310万–¥630万 <sup><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup></span>
+        <p>Renewable-forever residence permit tied to property ownership, no stay requirement, Schengen 90/180 mobility, 12 years of free public schooling or cheap international schools.<sup><a href="#ref-1">[1]</a></sup> No change of nationality, so no conflict with your hukou or PRC passport.</p>
+        <div class="verdict"><b>Best fit</b>Middle-class HNW families (~¥300万–¥700万 deployable offshore) prioritizing children's education and a low-risk "Plan B".</div>
+      </div></div>
+      <div class="card c-hk"><div class="bar"></div><div class="body">
+        <span class="flag">HONG KONG · 新资本投资者入境计划 (New CIES)</span>
+        <h4>The most compatible identity for mainlanders — and by far the highest bar</h4>
+        <span class="price">HK$30M net assets + HK$30M invested ≈ ¥2,700万+ <sup><a href="#ref-6">[6]</a><a href="#ref-8">[8]</a></sup></span>
+        <p>No education / language / residence requirements; renew on a 2+3+3 track purely by maintaining the investment; PR after 7 years or unconditional stay, after which capital is freed.<sup><a href="#ref-2">[2]</a><a href="#ref-6">[6]</a></sup> Mainland applicants must first obtain a foreign permanent residency (e.g., a small-country green card).<sup><a href="#ref-10">[10]</a></sup></p>
+        <div class="verdict"><b>Best fit</b>Genuinely high-net-worth families (¥3,000万+ verifiable) wanting HK education, low tax and dual-base living without giving up mainland ties.</div>
+      </div></div>
+      <div class="card c-tr"><div class="bar"></div><div class="body">
+        <span class="flag">TURKEY · 土耳其投资入籍</span>
+        <h4>A recyclable $400k for a real second passport — with the biggest legal caveat for PRC citizens</h4>
+        <span class="price">US$400k property, sellable after 3 yrs ≈ ¥285万 <sup><a href="#ref-11">[11]</a><a href="#ref-12">[12]</a></sup></span>
+        <p>Full citizenship in 6–12 months, family included, no residence requirement, and eligibility (not a guarantee) for the US E-2 treaty-investor route.<sup><a href="#ref-3">[3]</a><a href="#ref-12">[12]</a></sup> But PRC law does not recognize dual nationality — voluntarily naturalizing abroad can mean automatic loss of Chinese nationality if it comes to light.<sup><a href="#ref-14">[14]</a></sup></p>
+        <div class="verdict"><b>Best fit</b>US-oriented investors/entrepreneurs whose capital is already offshore and who accept the dual-nationality risk knowingly.</div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="ladder">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">02</span><h2>The capital ladder</h2></div>
+    <p class="sec-sub">Entry costs converted to RMB at approximate mid-2026 rates (US$1≈¥7.1 · €1≈¥7.8 · HK$1≈¥0.92), plotted on a log scale. The dashed line is a mental anchor most readers in your target cities share: a mid-range inner-ring Shanghai apartment.</p>
+    <div class="ladder">
+      <div class="rail">
+        <div class="anchor-line" style="left:53%"><span class="anchor-cap">≈¥600万 — a mid-range inner-ring Shanghai flat</span></div>
+        <div class="rung" style="left:20%"><span class="cap"><b>¥≈196万</b><br>Greece €250k<br><span style="color:var(--muted)">restricted route only</span></span><span class="stick" style="height:64px;background:var(--gr);opacity:.45"></span></div>
+        <div class="rung" style="left:31%"><span class="cap"><b>¥≈285万</b><br>Turkey $400k</span><span class="stick" style="height:92px;background:var(--tr)"></span></div>
+        <div class="rung" style="left:37%"><span class="cap"><b>¥≈312万</b><br>Greece €400k<br><span style="color:var(--muted)">standard zone</span></span><span class="stick" style="height:104px;background:var(--gr)"></span></div>
+        <div class="rung" style="left:60%"><span class="cap"><b>¥≈624万</b><br>Greece €800k<br><span style="color:var(--muted)">Athens · Thessaloniki · hot islands</span></span><span class="stick" style="height:138px;background:var(--gr)"></span></div>
+        <div class="rung" style="left:97%"><span class="cap"><b>¥≈2,745万</b><br>Hong Kong HK$30M</span><span class="stick" style="height:186px;background:var(--hk)"></span></div>
+      </div>
+      <div class="rail-scale"><span>¥100万</span><span>¥300万</span><span>¥1,000万</span><span>¥3,000万</span></div>
+      <p class="foot">Greece's €250k tier survives only for converting commercial property to residential use or restoring listed buildings; open-market purchases in Attica (Athens), Thessaloniki, Mykonos, Santorini and islands with population above 3,100 require €800k, everywhere else €400k.<sup><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup> Turkey's $400k is fully recoverable — the property may be sold after the 3-year title-deed restriction while citizenship is kept for life.<sup><a href="#ref-11">[11]</a><a href="#ref-17">[17]</a></sup> Hong Kong's HK$30M must stay invested until year 7 (PR or unconditional stay), after which the funds are freed.<sup><a href="#ref-10">[10]</a></sup></p>
+    </div>
+  </div>
+</section>
+
+<section id="matrix">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">03</span><h2>Master comparison</h2></div>
+    <p class="sec-sub">Figures verified against official or primary sources where possible (HK Immigration Department, program-law summaries); items sourced only from the WeChat articles are marked.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th></th><th class="h-gr">Greece Golden Visa</th><th class="h-hk">Hong Kong New CIES</th><th class="h-tr">Turkey CBI</th></tr></thead>
+        <tbody>
+          <tr><th>What you get</th>
+            <td>Residence permit (永居卡), renewable indefinitely while property is held<sup><a href="#ref-1">[1]</a></sup></td>
+            <td>2+3+3 resident visa → HK PR after 7 yrs of ordinary residence, or unconditional stay if residence not met<sup><a href="#ref-2">[2]</a><a href="#ref-6">[6]</a></sup></td>
+            <td>Full citizenship + passport in ~6–12 months<sup><a href="#ref-11">[11]</a><a href="#ref-13">[13]</a></sup></td></tr>
+          <tr><th>Minimum capital</th>
+            <td>€800k (Athens, Thessaloniki, Mykonos, Santorini, big islands) / €400k elsewhere / €250k only for conversion &amp; restoration projects<sup><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup></td>
+            <td>HK$30M net assets held 6 months + HK$30M invested (≥HK$27M in permitted assets + HK$3M into the CIES portfolio, 7-yr lock)<sup><a href="#ref-6">[6]</a><a href="#ref-7">[7]</a><a href="#ref-9">[9]</a></sup></td>
+            <td>US$400k real estate (3-yr hold) or US$500k deposit/bonds/funds<sup><a href="#ref-11">[11]</a></sup></td></tr>
+          <tr><th>Capital recoverable?</th>
+            <td class="mid">Partly — sell the property and the permit lapses; hold it and capital stays parked (rental yield ~3–4% claimed)<sup><a href="#ref-1">[1]</a></sup></td>
+            <td class="mid">After ~7 years (PR or unconditional stay), funds are freed<sup><a href="#ref-10">[10]</a></sup></td>
+            <td class="good">Yes — sell after 3 years, keep citizenship forever<sup><a href="#ref-11">[11]</a><a href="#ref-17">[17]</a></sup></td></tr>
+          <tr><th>Who may apply (mainland resident)</th>
+            <td class="good">Directly, on a PRC passport</td>
+            <td class="bad">Not directly — must first hold a foreign permanent residency (e.g., Vanuatu / Guinea-Bissau card)<sup><a href="#ref-6">[6]</a><a href="#ref-10">[10]</a></sup></td>
+            <td class="good">Directly, on a PRC passport</td></tr>
+          <tr><th>Nationality / hukou impact</th>
+            <td class="good">None — it is residence, not citizenship</td>
+            <td class="good">None before PR; even after HK PR you may keep or cancel the mainland hukou<sup><a href="#ref-2">[2]</a></sup></td>
+            <td class="bad">PRC Nationality Law Art. 9: settling abroad + voluntarily acquiring foreign nationality = automatic loss of Chinese nationality; undisclosed dual status risks hukou/ID cancellation if discovered<sup><a href="#ref-14">[14]</a></sup></td></tr>
+          <tr><th>Residence requirement</th>
+            <td class="good">None to renew; ~4yr2mo in 5 yrs only if you want EU long-term residence / citizenship<sup><a href="#ref-1">[1]</a></sup></td>
+            <td class="good">None to renew (investment-based); 7 yrs "ordinary residence" only for PR<sup><a href="#ref-2">[2]</a><a href="#ref-6">[6]</a></sup></td>
+            <td class="good">None<sup><a href="#ref-11">[11]</a></sup></td></tr>
+          <tr><th>Mobility</th>
+            <td>Schengen: 90/180 days across 29 states<sup><a href="#ref-1">[1]</a></sup></td>
+            <td>HKSAR passport (after PR, ~170 destinations); before PR you travel on your existing documents</td>
+            <td>~110–120 destinations visa-free/VoA; <b>not</b> Schengen visa-free (5-yr C-2 multi-entry visas available); US E-2 treaty eligibility<sup><a href="#ref-12">[12]</a><a href="#ref-13">[13]</a><a href="#ref-17">[17]</a></sup></td></tr>
+          <tr><th>Children's education</th>
+            <td>12 yrs free Greek public school; low-cost British/American international schools; overseas-Chinese joint exam (华侨生联考) route possible once residence-abroad conditions are met<sup><a href="#ref-1">[1]</a></sup></td>
+            <td>15 yrs free education; HK DSE into HK + 145 mainland + 300+ overseas universities; 华侨生联考 / dual-institution admission after PR<sup><a href="#ref-2">[2]</a></sup></td>
+            <td>Local/international schools; the marketed education play is E-2 → US public schools, which first requires running a real US business<sup><a href="#ref-3">[3]</a><a href="#ref-12">[12]</a></sup></td></tr>
+          <tr><th>Tax angle</th>
+            <td>Non-resident unless you actually move; property taxes + rental income tax in Greece apply</td>
+            <td>Salaries tax 2–17%, profits tax 15/16.5%, no CGT on stocks — attractive if you genuinely shift income there<sup><a href="#ref-2">[2]</a></sup></td>
+            <td>Residence-based taxation; 4% title transfer tax, annual property tax; TRY inflation/currency risk on the asset<sup><a href="#ref-13">[13]</a></sup></td></tr>
+          <tr><th>Program trajectory</th>
+            <td class="bad">Tightening — thresholds already tripled in hot zones in Sept 2024; EU pressure on golden visas continues<sup><a href="#ref-4">[4]</a></sup></td>
+            <td class="good">Loosening — asset-review window cut to 6 months (Mar 2025), property rules relaxed (Sept 2025), holding-company rules eased (Mar 2026); 2,200+ applications, ~HK$70bn expected<sup><a href="#ref-7">[7]</a><a href="#ref-8">[8]</a><a href="#ref-9">[9]</a></sup></td>
+            <td class="mid">Stable at $400k as of 2026, but the threshold already jumped from $250k in 2022 and advisors expect another rise<sup><a href="#ref-11">[11]</a><a href="#ref-13">[13]</a></sup></td></tr>
+          <tr><th>Main risks</th>
+            <td>Buying overpriced "golden-visa inventory"; permit dies if you sell; rule changes mid-stream</td>
+            <td>Third-country PR step adds cost/compliance questions; HK$30M market exposure for 7 yrs; source-of-funds audit by HK CPA<sup><a href="#ref-10">[10]</a></sup></td>
+            <td>Dual-nationality legality; lira depreciation eroding real property value (prices +18% nominal ≈ −10% real in 2025)<sup><a href="#ref-13">[13]</a></sup>; E-2 oversold as automatic</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reality">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">04</span><h2>The mainland reality check — what the articles don't say</h2></div>
+    <p class="sec-sub">For a resident of Shanghai or Shenzhen, "achievable" is decided less by the program's rules than by three PRC-side constraints. This is where most plans quietly fail.</p>
+
+    <h3>1 · Getting the money out is the real threshold</h3>
+    <p>China's personal FX quota is US$50,000 per person per year, and the purchase application form explicitly states the quota <strong>may not be used for overseas property purchase, securities investment, or investment-linked insurance</strong> — these are unopened capital-account items.<sup><a href="#ref-15">[15]</a><a href="#ref-16">[16]</a></sup> So a €400k Greek flat or a $400k Istanbul flat cannot be legally funded by simply wiring salary savings abroad. Pooling relatives' quotas ("蚂蚁搬家" smurfing) is expressly prohibited and has produced criminal convictions for illegal FX purchase when amounts are large.<sup><a href="#ref-16">[16]</a></sup></p>
+    <ul>
+      <li><strong>Legal routes that do exist:</strong> wealth already offshore (overseas earnings, HK/US brokerage gains, offshore company dividends); QDII-type channeled products; or the one-time emigrant property transfer (个人财产对外转移) — which is only available <em>after</em> you have already obtained foreign PR, so it can fund life abroad but not the qualifying investment itself in most cases.<sup><a href="#ref-16">[16]</a></sup></li>
+      <li><strong>Practical implication:</strong> all three programs are realistically open only to families who already hold sufficient offshore assets. This is precisely why the Turkey article's protagonists are "美股搭子" — their capital is already sitting in US brokerage accounts.<sup><a href="#ref-3">[3]</a></sup></li>
+    </ul>
+
+    <h3>2 · Nationality law splits the three options into two legal categories</h3>
+    <p>Greece and Hong Kong grant <em>residence</em>; Turkey grants <em>citizenship</em>. Under the PRC Nationality Law (Art. 3: dual nationality not recognized; Art. 9: a Chinese national who settles abroad and voluntarily acquires a foreign nationality automatically loses Chinese nationality), a Turkish passport quietly held alongside a PRC passport and hukou is a legally unstable arrangement.<sup><a href="#ref-14">[14]</a></sup> Consequences if surfaced (e.g., border data matching, CRS reporting, or renewing documents) can include cancellation of hukou and PRC documents. The Turkey article frames the passport as pure upside; for a mainland civil-servant-adjacent or SOE employee — including someone at a state-owned group like yours — this risk category deserves the most weight, and many employers' compliance rules add a second layer of restriction on foreign residency/nationality.</p>
+
+    <h3>3 · Hong Kong's "detour" requirement adds a hidden step and hidden cost</h3>
+    <p>The HK Immigration Department limits New CIES eligibility to foreign nationals, Macao/Taiwan residents, and <strong>Chinese citizens who have already obtained foreign permanent-resident status</strong>.<sup><a href="#ref-6">[6]</a></sup> Mainland applicants therefore first buy a small-country PR (agents commonly cite Vanuatu or Guinea-Bissau), adding roughly US$15k–$50k and a compliance question mark that law firms advise vetting carefully.<sup><a href="#ref-10">[10]</a></sup> Net-asset review (6 months of holdings, audited by an HK CPA) and source-of-funds scrutiny are real gates — crypto has been accepted as proof of assets in reported cases, but with full transaction and tax documentation.<sup><a href="#ref-18">[18]</a></sup></p>
+
+    <div class="note"><span class="tag">Compliance reminder</span>This brief is general research, not legal, tax, or investment advice. FX, nationality, tax-residency (CRS) and employer-specific rules interact case-by-case; engage a licensed immigration lawyer and a cross-border tax advisor before moving money or filing anything.</div>
+  </div>
+</section>
+
+<section id="dives">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">05</span><h2>Program deep dives</h2></div>
+
+    <div class="dive d-gr">
+      <span class="eyebrow">Greece · Golden Visa 房产+永居</span>
+      <h3>The low door has been raised — plan around €400k, not €250k</h3>
+      <div class="kv">Status: EU + Schengen member · Permit: investor residence, family included (three generations) · Stay requirement: none · Citizenship path: ~7 yrs actual residence + Greek language test</div>
+      <div class="grid2">
+        <div>
+          <h5>What still holds from the article</h5>
+          <ul>
+            <li>Residence continues as long as the property is held; family (spouse, children, parents) included.<sup><a href="#ref-1">[1]</a></sup></li>
+            <li>Schengen mobility: 90 days per 180 across 29 states without extra visas.<sup><a href="#ref-1">[1]</a></sup></li>
+            <li>Education play is real: free public schooling, comparatively cheap international schools, plus a possible 华侨生联考 route back into top mainland universities once residence-abroad conditions are satisfied.<sup><a href="#ref-1">[1]</a></sup></li>
+          </ul>
+        </div>
+        <div>
+          <h5>What changed / what to watch</h5>
+          <ul>
+            <li>Since 31 Aug 2024 the tiers are €800k (Attica, Thessaloniki, Mykonos, Santorini, islands &gt;3,100 pop.) and €400k elsewhere; €250k survives only for commercial-to-residential conversions and listed-building restorations — a narrower, execution-risk-heavy niche.<sup><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup></li>
+            <li>€800k-zone properties must generally be single properties ≥120㎡; short-term-letting restrictions apply to some categories.<sup><a href="#ref-5">[5]</a></sup></li>
+            <li>The article's price-boom framing (+86% since 2017, Athens south +14.7%/yr) is the seller's pitch — entering after a 8-year run-up means buying high; golden-visa-earmarked stock often carries a premium.<sup><a href="#ref-1">[1]</a></sup></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dive d-hk">
+      <span class="eyebrow">Hong Kong · New Capital Investment Entrant Scheme 新资本投资者入境计划</span>
+      <h3>Not really "immigration" — a capital-for-status swap inside China's own system</h3>
+      <div class="kv">Threshold: HK$30M net assets (6-month look-back) + HK$30M invested · Structure: ≥HK$27M permitted assets (stocks, bonds, funds; non-residential property capped at HK$15M; one residence priced ≥HK$30M capped at HK$10M) + HK$3M CIES portfolio (7-yr lock) · Visa: 2+3+3 · PR at year 7 or unconditional stay</div>
+      <div class="grid2">
+        <div>
+          <h5>Why it suits developed-city mainlanders best</h5>
+          <ul>
+            <li>Same country, same time zone, one-hour access from Shenzhen/Guangzhou; keeping mainland hukou is allowed even after converting to HK PR.<sup><a href="#ref-2">[2]</a></sup></li>
+            <li>No residence, work, education or language requirement to renew — the only real obligation is keeping HK$30M invested; it is the only mainstream HK route offering unconditional stay if PR residence tests aren't met.<sup><a href="#ref-2">[2]</a><a href="#ref-6">[6]</a></sup></li>
+            <li>Momentum is on the applicant's side: asset-review window cut from 2 years to 6 months (Mar 2025), family co-owned assets countable, holding-company investment allowed (further eased Mar 2026), property rules relaxed (Sept 2025).<sup><a href="#ref-7">[7]</a><a href="#ref-9">[9]</a></sup> Applications passed 2,200 by late 2025 with ~HK$70bn expected inflow.<sup><a href="#ref-8">[8]</a></sup></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Frictions the article downplays</h5>
+          <ul>
+            <li>The third-country-PR prerequisite for mainland Chinese citizens is structural, not a loophole — budget time and vetting for it.<sup><a href="#ref-6">[6]</a><a href="#ref-10">[10]</a></sup></li>
+            <li>HK$30M sits in market assets for ~7 years: drawdowns are your problem; the HK$3M CIES portfolio is locked for 7 years regardless.<sup><a href="#ref-9">[9]</a></sup></li>
+            <li>Converting to PR still requires "ordinary residence" evidence in practice (home, schooling, tax footprint); pure absentee investors usually land on unconditional stay instead — fine for most purposes, but not a HKSAR passport.<sup><a href="#ref-6">[6]</a></sup></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dive d-tr">
+      <span class="eyebrow">Turkey · Citizenship by Investment 投资入籍</span>
+      <h3>The cleverest financial structure — and the heaviest legal asterisk</h3>
+      <div class="kv">Threshold: US$400k real estate (bank-transfer only, SPK-licensed valuation, EIDS-verified) · Hold: 3 years (title-deed annotation) · Timeline: ~6–12 months · Family: spouse + children under 18 · Dual citizenship: allowed by Turkey — not by China</div>
+      <div class="grid2">
+        <div>
+          <h5>The genuine logic of the "美股搭子" pitch</h5>
+          <ul>
+            <li>Capital is parked, not burned: unlike Caribbean donation programs, the $400k returns when the property is sold after year 3, while citizenship is permanent.<sup><a href="#ref-3">[3]</a><a href="#ref-11">[11]</a><a href="#ref-17">[17]</a></sup></li>
+            <li>E-2 treaty eligibility is real and is the passport's core differentiator for US-oriented people: no lottery, no quota, renewable indefinitely, spouse can work, children attend US public schools.<sup><a href="#ref-3">[3]</a><a href="#ref-12">[12]</a></sup></li>
+            <li>No residence requirement, fast processing, and (since 2026) same-day biometrics on a short visit.<sup><a href="#ref-17">[17]</a><a href="#ref-11">[11]</a></sup></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Where the article oversells</h5>
+          <ul>
+            <li><strong>E-2 is not a ticket that comes with the passport.</strong> It additionally requires investing "substantial" capital into a real, operating US business you direct — typically another US$100k+ and an approvable business plan; it's a non-immigrant visa with no green-card path of its own.<sup><a href="#ref-12">[12]</a></sup></li>
+            <li>Visa-free count is ~110–120 (Henley 2026 rank ≈51st per one tracker), not obviously "global No.39"; and Schengen/UK/Canada/US all still require visas.<sup><a href="#ref-12">[12]</a><a href="#ref-13">[13]</a></sup></li>
+            <li>Currency risk: 2025 Istanbul-area prices rose ~18% nominal but ~−10% real after inflation; a USD-denominated "money-back" plan depends on the exit market.<sup><a href="#ref-13">[13]</a></sup></li>
+            <li>And the decisive one for mainlanders: PRC non-recognition of dual nationality (see Section 04).<sup><a href="#ref-14">[14]</a></sup></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">06</span><h2>So which is "more suitable and achievable"?</h2></div>
+    <p class="sec-sub">Ranking depends on the household's offshore liquidity and objective. For residents of developed mainland cities, the honest matrix looks like this:</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Household profile (typical in SH/BJ/SZ/GZ/HZ/SZ/NJ)</th><th>Recommended door</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><th>Upper-middle class: ¥300万–¥700万 deployable offshore; goal = kids' education + Plan B; wants zero nationality risk</th>
+            <td><b style="color:var(--gr)">Greece (€400k zone)</b></td>
+            <td>Lowest legal-risk product (residence only), lowest workable price, no stay requirement, education path both westward and back via 华侨生联考. Achievability hinges entirely on having the funds legally offshore.</td></tr>
+          <tr><th>Genuine HNW: ¥3,000万+ verifiable, business or investment income, wants dual-base Greater-Bay life, HK schooling, low tax</th>
+            <td><b style="color:var(--hk)">Hong Kong New CIES</b></td>
+            <td>Most compatible with keeping a mainland career, hukou and family structure; strongest education dividend (DSE / 华侨生联考); policy actively loosening. Highest bar, plus the third-country-PR step.</td></tr>
+          <tr><th>US-oriented trader / founder with US$500k+ already in offshore/US accounts; comfortable with legal gray zones; may eventually relocate to the US</th>
+            <td><b style="color:var(--tr)">Turkey CBI</b></td>
+            <td>Only option that returns the capital and yields a lifetime status; unique E-2 bridge to the US. Must consciously accept PRC dual-nationality exposure and prepare a real E-2 business, not just the passport.</td></tr>
+          <tr><th>Employees of SOEs / civil service / sensitive sectors (incl. state-owned group staff)</th>
+            <td><b>None yet — Greece only, later, if at all</b></td>
+            <td>Foreign nationality (Turkey) is typically incompatible with such roles; even foreign PR often triggers reporting duties. If planning at all, a pure residence product acquired after leaving such employment carries the least career risk.</td></tr>
+          <tr><th>Family with mainly onshore RMB wealth and no offshore base</th>
+            <td><b>Realistically: none, for now</b></td>
+            <td>The FX rules in Section 04 make every option non-compliant to fund from scratch. First-order task is building legal offshore income/assets, not choosing a program.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px"><strong>Bottom line:</strong> by cost, Greece is the most <em>achievable</em>; by fit with a mainland life, Hong Kong is the most <em>suitable</em> but is a genuinely rich-family product; Turkey is the most financially elegant but the least legally comfortable for a PRC national. The single biggest gate for all three is not the program — it is whether your capital is already, legally, outside the mainland.</p>
+  </div>
+</section>
+
+<section id="factcheck">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">07</span><h2>Fact-check of the three WeChat articles</h2></div>
+    <p class="sec-sub">Marketing content from immigration agencies is directionally informative but selectively framed. Key claims audited:</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Claim (article &amp; location)</th><th>Verdict</th><th>Finding</th></tr></thead>
+        <tbody>
+          <tr><th>"25万欧元以上房产 → 希腊永居" — Article 1, opening section<sup><a href="#ref-1">[1]</a></sup></th><td class="bad">Misleading</td>
+            <td>True only for the niche conversion/restoration route. Open-market purchases require €400k, or €800k in Athens/Thessaloniki/hot islands since 31 Aug 2024.<sup><a href="#ref-4">[4]</a><a href="#ref-5">[5]</a></sup> The headline price understates the typical cost by 60–220%.</td></tr>
+          <tr><th>"持希腊永居卡180天内累计停留29个申根国90天" — Article 1, §希腊永居为何受到青睐<sup><a href="#ref-1">[1]</a></sup></th><td class="good">Accurate</td>
+            <td>Standard Schengen 90/180 rule for residence-permit holders.</td></tr>
+          <tr><th>HK CIES: 3,000万门槛、6个月资产核查、家庭共有资产可计入、全资公司架构 — Article 2, opening<sup><a href="#ref-2">[2]</a></sup></th><td class="good">Accurate</td>
+            <td>Matches the official optimization list effective 1 Mar 2025 (and further holding-company easing from 1 Mar 2026).<sup><a href="#ref-7">[7]</a></sup></td></tr>
+          <tr><th>"截至2025年8月申请1,900宗、注资580亿港元" — Article 2, data paragraph<sup><a href="#ref-2">[2]</a></sup></th><td class="good">Accurate</td>
+            <td>Official figure: 1,963 applications by end-Aug 2025, &gt;HK$58bn expected; risen to 2,200+ (~HK$70bn) by Nov 2025.<sup><a href="#ref-8">[8]</a></sup></td></tr>
+          <tr><th>2025施政报告: 非住宅可算入额1,000万→1,500万、住宅成交价门槛5,000万→3,000万 — Article 2<sup><a href="#ref-2">[2]</a></sup></th><td class="good">Accurate</td>
+            <td>Confirmed by the 17 Sep 2025 Policy Address coverage; note the residential <em>countable</em> amount stays capped at HK$10M and combined property counts max HK$15M.<sup><a href="#ref-8">[8]</a><a href="#ref-9">[9]</a></sup></td></tr>
+          <tr><th>"内地居民需先取得外国永居身份（如小国绿卡）" — Article 2, 申请条件<sup><a href="#ref-2">[2]</a></sup></th><td class="good">Accurate</td>
+            <td>Consistent with the Immigration Department's eligible-applicant definition.<sup><a href="#ref-6">[6]</a></sup> The article omits the cost/compliance vetting this step deserves.<sup><a href="#ref-10">[10]</a></sup></td></tr>
+          <tr><th>"土耳其护照121国免签、全球排名39 (52→46→39)" — Article 3, table &amp; ranking paragraph<sup><a href="#ref-3">[3]</a></sup></th><td class="mid">Unverified / inflated</td>
+            <td>Independent 2026 trackers put access at ~110–120 destinations and one cites Henley rank ≈51. Ranking methodology varies; treat "No.39" as marketing.<sup><a href="#ref-12">[12]</a><a href="#ref-13">[13]</a></sup></td></tr>
+          <tr><th>"一本土耳其护照，直接给你E-2的门票…孩子教育走E-2去美国读公立学校" — Article 3<sup><a href="#ref-3">[3]</a></sup></th><td class="mid">Half-true</td>
+            <td>Turkey is an E-2 treaty country, but the visa itself requires a substantial at-risk investment in an operating US business, active management, and consular approval; it is nonimmigrant and renewable, not a residence guarantee.<sup><a href="#ref-12">[12]</a></sup></td></tr>
+          <tr><th>"40万美金…3年后卖掉，身份还在" — Article 3<sup><a href="#ref-3">[3]</a></sup></th><td class="good">Accurate</td>
+            <td>3-year title-deed restriction then free sale, citizenship retained.<sup><a href="#ref-11">[11]</a><a href="#ref-17">[17]</a></sup> Caveat: exit price bears TRY/market risk.<sup><a href="#ref-13">[13]</a></sup></td></tr>
+          <tr><th>All three articles: silence on PRC FX rules and (Article 3) on dual-nationality law</th><td class="bad">Material omission</td>
+            <td>Personal FX quota may not fund overseas property/investment; smurfing is punishable.<sup><a href="#ref-15">[15]</a><a href="#ref-16">[16]</a></sup> PRC law does not recognize dual nationality.<sup><a href="#ref-14">[14]</a></sup> These omissions change the practical answer for most readers.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="refs" class="refs">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">08</span><h2>References</h2></div>
+    <ol>
+      <li id="ref-1">WeChat article (project file): 《欧洲最后一个低门槛"房产+永居"机会：希腊！》, 中加思培移民. <span class="where">Used at: opening §(€250k claim); §希腊永居为何受到青睐 (Schengen 29国/90天, 5年住满4年2个月); §房产增值 (86%涨幅, 雅典南部14.7%, 租金3–4%); §谁更适合希腊身份 (education, 三代移民, Plan B).</span></li>
+      <li id="ref-2">WeChat article (project file): 《7月香港身份新政速递！【施政报告+五年规划同步咨询，黄金窗口期进入倒计时】》. <span class="where">Used at: opening (2003/2015/2024 timeline, Mar-2025 three optimizations); data ¶ (1,900宗/580亿); 施政报告 ¶ (1,500万/3,000万); §申请条件; §续签模式和要求 (2+3+3, 无条件逗留); §香港身份的优势 (户口, DSE, 华侨生联考, 税率2–17%).</span></li>
+      <li id="ref-3">WeChat article (project file): 《美股搭子们，已经开始组团办土耳其护照了》. <span class="where">Used at: comparison table (40万美金/3年可卖/E-2/121国); §E-2签证才是真正的王炸; ranking ¶ (52→46→39); closing §身份是跨境资产配置的底层逻辑.</span></li>
+      <li id="ref-4">FNDCS Immigration, "Greece Golden Visa 2026: Real Estate Thresholds, Benefits &amp; Key Updates". <span class="where">Used for: €800k/€400k tiers; €250k limited to conversion/restoration. https://www.fndcsimmigration.com/blog/greece-golden-visa-2026-real-estate-thresholds-benefits-key-updates</span></li>
+      <li id="ref-5">Astons, "Greece Golden Visa Requirements: Complete 2026 Eligibility &amp; Documentation Guide". <span class="where">Used for: zone definitions and €250k–€800k tier detail. https://www.astons.com/blog/greece-golden-visa-requirements/</span></li>
+      <li id="ref-6">HK Immigration Department (official), 新资本投资者入境计划 page. <span class="where">Used for: eligible-applicant categories (foreign nationals; Chinese citizens with foreign PR; Macao/Taiwan residents; Afghanistan/Cuba/DPRK excluded); dependants; 2+3+3 extensions; 7-yr right of abode. https://www.immd.gov.hk/hks/services/visas/newcies.html</span></li>
+      <li id="ref-7">FamilyOfficeHK (official, InvestHK), New CIES enhancement measures. <span class="where">Used for: 6-month net-asset look-back effective 1 Mar 2025; family co-owned assets; holding-company easing effective 1 Mar 2026. https://www.familyofficehk.gov.hk/zh-cn/new-capital-investment-entrant-scheme/</span></li>
+      <li id="ref-8">Sina Finance, 2025-09-20, 《5000万港元降至3000万港元 香港放松投资移民买房门槛》; and 洲际移民 2025-11-13 update. <span class="where">Used for: Policy Address 17 Sep 2025 residential threshold cut; 1,963 applications / HK$58bn by end-Aug 2025; 2,200+ applications / ~HK$70bn by Nov 2025. https://finance.sina.com.cn/chanjing/dckb/2025-09-20/doc-infreech3561822.shtml</span></li>
+      <li id="ref-9">Eastmoney 财富号, 2025-09-19, 《2025香港新资本投资入境计划新政出台：住宅门槛降至3,000万港元》. <span class="where">Used for: non-residential cap HK$15M; residential countable cap HK$10M; combined property cap HK$15M; HK$27M+HK$3M structure. https://caifuhao.eastmoney.com/news/20250919174822502115510</span></li>
+      <li id="ref-10">DeHeng Law Offices (德恒律师事务所), 《香港特区"新资本投资者入境计划"解读》. <span class="where">Used for: mainland applicants needing prior foreign PR; compliance cautions on small-country PR; capital freed at year 7 (PR/unconditional stay). https://www.dehenglaw.com/CN/tansuocontent/0008/030054/7.aspx</span></li>
+      <li id="ref-11">Legal500 Legal Developments, "Turkish Citizenship by Investment – A Complete Guide for 2026". <span class="where">Used for: $400k threshold (since Jun 2022); $500k deposit alternative; 3-yr hold annotation; family scope; dual citizenship allowed by Turkey. https://www.legal500.com/developments/thought-leadership/turkish-citizenship-by-investment-a-complete-guide-for-2026/</span></li>
+      <li id="ref-12">JanusHermes, "Turkey Citizenship by Investment Through Real Estate (2026)". <span class="where">Used for: ~110–120 destinations; Schengen NOT visa-free (C-2 5-yr visa); E-2 treaty context; EIDS valuation, bank-transfer-only, 6–12-month timeline. https://janushermes.com/blog/turkey-citizenship-investment-real-estate-2026</span></li>
+      <li id="ref-13">Ogenus Property, "Turkish Citizenship by Investment 2026 | Full Guide". <span class="where">Used for: Henley 2026 rank ≈51; 114-country access; 2025 price data (+18% nominal, −10% real); expectations of a future threshold rise; property taxes. https://www.ogenusproperty.com/articles/turkish-citizenship-by-investment-2026-guide</span></li>
+      <li id="ref-14">《中华人民共和国国籍法》(1980), 第三条、第九条. <span class="where">Used for: non-recognition of dual nationality; automatic loss upon settling abroad and voluntarily acquiring foreign nationality. (Statute text; see npc.gov.cn.)</span></li>
+      <li id="ref-15">SAFE (国家外汇管理局), 《个人外汇管理办法实施细则》第二条; and SAFE/media clarification Jan 2017 (CRI report). <span class="where">Used for: US$50k annual quota; quota not usable for overseas property, securities, investment-linked insurance. https://www.safe.gov.cn/tianjin/2024/0430/2464.html ; https://news.cri.cn/20170103/ad8ba1d7-8420-b246-e26d-49e182f97151.html</span></li>
+      <li id="ref-16">DeHeng Law Offices, 《评析资金出海的法律风险（二）》. <span class="where">Used for: smurfing (分拆购汇) prohibition and criminal conviction example; emigrant property transfer (个人财产对外转移) requiring foreign PR first. https://www.dehenglaw.com/CN/tansuocontent/0008/029833/7.aspx</span></li>
+      <li id="ref-17">Immigrant Invest, "Turkey Citizenship by Investment Program 2026". <span class="where">Used for: sale after 3 years with citizenship retained; C-2 Schengen 5-yr visa; 2026 procedural updates (same-day biometrics, fee changes). https://immigrantinvest.com/turkish-citizenship/</span></li>
+      <li id="ref-18">Zhihu industry summary (银河集团), 《香港投资移民计划3000万官方政策及细则公布》. <span class="where">Used for: crypto accepted as net-asset proof with SOF documentation (secondary source; treat as indicative). https://zhuanlan.zhihu.com/p/1927010998776206320</span></li>
+    </ol>
+    <h3>Further reading</h3>
+    <ul style="font-size:14px;color:#33424E">
+      <li>InvestHK — New CIES official rules &amp; FAQ: familyofficehk.gov.hk</li>
+      <li>Republic of Türkiye Investment Office — official citizenship-by-investment page</li>
+      <li>Enterprise Greece / Hellenic Ministry of Migration — Golden Visa legal texts (Law 5100/2024 amendments)</li>
+      <li>US Department of State, 9 FAM 402.9 — E-2 treaty investor requirements</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Disclaimer.</strong> Prepared 6 July 2026 from the three project-file WeChat articles plus the external sources listed above. Exchange rates are approximate (US$1≈¥7.1, €1≈¥7.8, HK$1≈¥0.92). Immigration, FX and tax rules change frequently and vary by individual circumstance; this document is research, not legal, tax, immigration or investment advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
